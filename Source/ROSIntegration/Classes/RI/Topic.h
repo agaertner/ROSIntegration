@@ -80,7 +80,7 @@ protected:
 	void OnBoolMessage(const int& Data);
 
 	UFUNCTION(BlueprintImplementableEvent, Category = ROS)
-	void OnFloat64Message(const double& Data);
+	void OnFloat64Message(const float& Data);
 
 	UFUNCTION(BlueprintImplementableEvent, Category = ROS)
 	void OnInt32Message(const int32& Data);
