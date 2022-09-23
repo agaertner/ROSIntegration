@@ -81,6 +81,8 @@ public:
 
 	void BeginDestroy() override;
 
+	void Shutdown();
+
 private:
 
 	UPROPERTY()

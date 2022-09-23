@@ -53,8 +53,8 @@ public:
 	void RegisterErrorCallback(std::function<void(rosbridge2cpp::TransportError)> fun);
 	void ReportError(rosbridge2cpp::TransportError err);
 	void SetTransportMode(rosbridge2cpp::ITransportLayer::TransportMode);
-
 	bool IsHealthy() const;
+    void Shutdown();
 
 private:
 	std::string _ip_addr;

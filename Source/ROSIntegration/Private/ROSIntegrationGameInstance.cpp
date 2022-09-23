@@ -189,6 +189,9 @@ void UROSIntegrationGameInstance::CheckROSBridgeHealth()
 void UROSIntegrationGameInstance::Shutdown()
 {
 	UE_LOG(LogROS, Display, TEXT("ROS Game Instance - shutdown start"));
+
+	ROSIntegrationCore->Shutdown();
+
 	if (bConnectToROS)
 	{
 		if(bTimerSet) GetTimerManager().ClearTimer(TimerHandle_CheckHealth);
@@ -203,6 +206,7 @@ void UROSIntegrationGameInstance::Shutdown()
 
 		UE_LOG(LogROS, Display, TEXT("ROS Game Instance - shutdown done"));
 	}
+
 	Super::Shutdown();
 }
 

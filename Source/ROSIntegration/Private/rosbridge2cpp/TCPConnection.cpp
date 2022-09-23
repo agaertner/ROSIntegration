@@ -277,3 +277,8 @@ bool TCPConnection::IsHealthy() const
 {
 	return run_receiver_thread;
 }
+
+void TCPConnection::Shutdown()
+{
+	run_receiver_thread = false;
+}

@@ -405,6 +405,12 @@ bool UROSIntegrationCore::IsHealthy() const
 	return _Implementation->Get()->IsHealthy();
 }
 
+void UROSIntegrationCore::Shutdown()
+{
+	TCPConnection* conn = static_cast<TCPConnection*>(_Implementation->Get()->_Connection);
+	conn->Shutdown();
+}
+
 void UROSIntegrationCore::SetWorld(UWorld* World)
 {
 	assert(_Implementation);
